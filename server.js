@@ -39,12 +39,12 @@ app.use(methodOverride("_method")) // override for put and delete requests from 
 
 
 
-
+//home page
 app.get('/', (req, res) => {
     res.send('<h1>Server is Working</h1>')
 })
 
-
+// seed route
 app.get('/house/seed', (req, res) => {
 
     const seedHouses = [
@@ -66,7 +66,7 @@ app.get('/house/seed', (req, res) => {
 })
 
 
-
+//index page
 app.get('/house', (req, res) => {
     House.find({})
     .then((houses) => {
@@ -75,8 +75,39 @@ app.get('/house', (req, res) => {
     });
 
 })
+//new route
+app.get('/house/new', (req, res) => {
+    res.render('house/new.ejs')
+})
+//create route
+app.post('/house', (req, res) => {
+    House.create(req.body,(err, houses) => {
+        res.redirect('/house')
+    })
+})
+
+//get edit page
+app.get('/house/:id/edit', (req, res) => {
+    House.findById(req.params.id, (err, houses) => {
+        res.render('house/edit.ejs', {house: houses})
+    })
+})
+
+app.put('/house/:id', (req, res) => {
+    House.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, house) => {
+        res.redirect(`/house/${req.params.id}`)
+        console.log(house)
+    })
+})
 
 
+//show page
+app.get('/house/:id',(req, res) => {
+    House.findById(req.params.id)
+    .then((houses) => {
+        res.render('house/show.ejs', {houses})
+    })
+})
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`listening on ${PORT}`))

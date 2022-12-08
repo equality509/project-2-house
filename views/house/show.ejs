@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body><h1>Houses</h1>
+<body>
+    <h1>Show Page</h1>
+    <a href="/house"><button>Back To Home</button></a>
+    <a href="/house/<%=house._id%>/edit"><button>Edit Fruit</button></a>
 
-<a href="/house/new"><button>Post Your House</button></a>
-
-    <% for (house of houses) { %>
-        <a href="/house/<%= house._id%>"><%=house.name%></a>
-        <img src="<%=house.image%>" alt="">
-
-   <% } %>
-    
 </body>
 </html>
