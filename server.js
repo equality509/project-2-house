@@ -101,12 +101,24 @@ app.put('/house/:id', (req, res) => {
 })
 
 
+
+
+
 //show page
 app.get('/house/:id',(req, res) => {
     House.findById(req.params.id)
     .then((houses) => {
         res.render('house/show.ejs', {houses})
     })
+})
+
+app.delete('/house/:id', async (req, res) => {
+
+    const deletedHouse = await House.findByIdAndDelete(req.params.id)
+
+    if(deletedHouse){
+        res.redirect('/house/')
+    }
 })
 
 const PORT = process.env.PORT || 3000
