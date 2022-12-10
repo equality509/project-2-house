@@ -7,18 +7,42 @@
     <title>Document</title>
     <%- include('../partials/head.ejs') %>
 
+    
 </head>
 <body>
+<div class="img">
+    <div class="show-div">
     <h1>Show Page</h1>
+    <div class="second">
+        <img src="<%=house.image%>" alt="">
+    </div>
     <a href="/house"><button>Back To Home</button></a>
-    <a href="/house/<%=house._id%>/edit"><button>Edit Fruit</button></a>
+    <a href="/house/<%=house._id%>/edit"><button>Edit house</button></a>
+
+    <div class="first"></div>
 
     <h1>Posted By:</h1>
-    <h2><%=house.name%></h2>
+    <h2 class="show"><%=house.name%></h2>
+
+    <h1>Location:</h1>
+    <h2 class="show"><%=house.address%></h2>
+
+    <h1>Number Of Rooms:</h1>
+    <h2 class="show"><%=house.bedrooms%></h2>
+
+    <h1>Number Of Bathrooms:</h1>
+    <h2 class="show"><%=house.bathrooms%></h2>
+
 
     <form action="/house/<%= house._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" />
     </form>
+</div>
 
+</div>
+
+
+    
+</div>
 </body>
 </html>

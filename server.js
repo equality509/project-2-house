@@ -50,7 +50,7 @@ app.get('/house/seed', (req, res) => {
     const seedHouses = [
         { name: 'John', city: 'Orlando FL', address: '1648 Penny PLane', bedrooms: 3, bathrooms: 2, image: '/images/7145183_0_26EYaa_p.jpeg'},
         { name: 'Greg', city: 'Juliete NC', address: '46 Ferry Creek', bedrooms: 5, bathrooms: 3, image: '/images/im-463852.jpeg'},
-        { name: 'Craig', city: 'Springfield MA', address: '173 Harolds way', bedrooms: 4, bathrooms: 2, image: '/images/7145183_0_26EYaa_p.jpeg'},
+        { name: 'Craig', city: 'Springfield MA', address: '173 Harolds way', bedrooms: 4, bathrooms: 2, image: '/images/22.jpg'},
     ]
 
 
