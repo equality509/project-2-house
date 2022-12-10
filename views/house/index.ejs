@@ -5,16 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/static/styles.css">
+
+
 </head>
 <body><h1>Houses</h1>
 
 <a href="/house/new"><button>Post Your House</button></a>
-
+<main class="main">
+    <div class="movie">
     <% for (house of houses) { %>
+       
         <a href="/house/<%= house._id%>"><%=house.name%></a>
         <img src="<%=house.image%>" alt="">
 
    <% } %>
-    
+</div>
+</main>
 </body>
 </html>

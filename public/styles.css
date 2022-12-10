@@ -1,0 +1,25 @@
+
+body {
+    background-color: aqua;
+}
+
+
+main {
+    display: flex;
+    
+}
+
+
+
+
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: blue;
+    
+}
+
+.movie img {
+    width: 100%
+}
