@@ -48,15 +48,16 @@ app.get('/', (req, res) => {
 app.get('/house/seed', (req, res) => {
 
     const seedHouses = [
-        { name: 'John', city: 'Orlando FL', address: '1648 Penny PLane', bedrooms: 3, bathrooms: 2, image: '/images/7145183_0_26EYaa_p.jpeg'},
+        { name: 'John', city: 'Orlando FL', address: '1648 Penny PLane', bedrooms: 3, bathrooms: 2, image: '/images/11.jpg'},
         { name: 'Greg', city: 'Juliete NC', address: '46 Ferry Creek', bedrooms: 5, bathrooms: 3, image: '/images/im-463852.jpeg'},
-        { name: 'Craig', city: 'Springfield MA', address: '173 Harolds way', bedrooms: 4, bathrooms: 2, image: '/images/22.jpg'},
+        { name: 'Craig', city: 'Dawson WY', address: '366 Harolds way', bedrooms: 6, bathrooms: 4, image: '/images/22.jpg'},
+        { name: 'Rob', city: 'Springfield MA', address: '173 Harolds way', bedrooms: 4, bathrooms: 2, image: '/images/33.jpg'},
     ]
 
 
 
     House.deleteMany({}, (err, data) => {
-        House.create(seedHouses, (err, fruits) => {
+        House.create(seedHouses, (err, data) => {
             
             console.log(data)
             mongoose.connection.close()
@@ -107,8 +108,8 @@ app.put('/house/:id', (req, res) => {
 //show page
 app.get('/house/:id',(req, res) => {
     House.findById(req.params.id)
-    .then((houses) => {
-        res.render('house/show.ejs', {houses})
+    .then((house) => {
+        res.render('house/show.ejs', {house})
     })
 })
 

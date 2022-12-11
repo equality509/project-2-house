@@ -4,7 +4,8 @@
 }
 
 body {
-   background: linear-gradient(to right, blue,rgb(0, 0, 173), rgb(1, 1, 110));
+    
+   background: linear-gradient(to right, rgb(224, 224, 245),rgb(155, 155, 248), rgb(220, 220, 242));
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -15,21 +16,40 @@ body {
    
 
 .img {
+    
     background-image: url('/images/Screenshot 2022-12-10 at 5.08.43 PM.png');
    background-repeat: no-repeat;
-   height:100vh;
-   width: 200vh;
+   height:40rem;
+   max-width: 250rem;
    background-position: center center;
-   background-size: cover;
-   margin-top: 30px;
+   background-size:cover;
+   margin: 30 auto;
    border-radius: 10px;
    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-   margin: 10px;
+   box-sizing: content-box;
+   border: solid white;
+   overflow:auto;
+}
+
+.img2 {
+    
+    background-image: url('/images/Screenshot 2022-12-10 at 5.08.43 PM.png');
+   background-repeat: no-repeat;
+   height:1000px;
+   width: 1500px;
+   background-position: center center;
+   background-size:cover;
+   margin: 30 auto;
+   border-radius: 10px;
+   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+   box-sizing: content-box;
+   border: solid white;
 }
 
 .row {
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
  h1 {
@@ -37,49 +57,71 @@ body {
     letter-spacing: 3px;
 }
 
-.poke-container {
+.e-container {
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
     justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
+    text-align: center;
 }
 
-.pokemon {
-    background-color: #eee ;
+.mon {
+    background-color: rgb(165, 179, 199, 0.9) ;
     border-radius: 10px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     margin: 10px;
+    border:3px solid #eee;
 }
 
-.pokemon .img-container {
+.mon .img-container {
     
     /* background-color: rgba(255,255,255, 0.6); */
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    max-width: 300px;
+    max-height: 300px;
     text-align:center;
+
 
 }
 
-.pokemon .img-container img {
+.mon .img-container img {
     max-width: 90%;
     margin-top: 60px;
 }
 
-.show {
-    color:aliceblue;
+.show,  .show1{
+    color:rgb(196, 196, 249);
+    border:1px solid white;
+    margin:5px 400px;
+        background-color: rgba(21, 28, 51, 0.6);
+
 }
 
 .second {
     max-width: 10vph;
-    height: 10vph;
+    height: 4vph;
+    border: 2px solid white;
+    margin: 0 400px;
+    background-color: rgba(21, 28, 51, 0.6);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+form {
+    background-color: rgba(21, 28, 51, 0.6);
+    color:rgb(225, 225, 245);
+
 }
 
 .title {
     display:flex;
     justify-content: center;
+    text-shadow: 0 3px 15px rgba(100, 100, 100, 0.8);
+    color:rgb(239, 239, 253);
+
 }
 
 .show-div {
@@ -95,14 +137,35 @@ body {
    
 }
 
+.center {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    border: 3px solid white;
+    margin: 40px 400px;
+    background-color: rgba(21, 28, 51, 0.6);
 
-/* main {
+}
+
+
+.par {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    height:40rem;
+    max-width: 250rem;
+    background-position: center center;
+    background-size:cover;
+    margin: 0 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    box-sizing: content-box;
+    border: solid white;
+    overflow:auto;
 }
 
-.movie {
+/* .movie {
     width: 300px;
     margin: 1rem;
     background-color: rgb(61, 61, 177);
@@ -123,4 +186,4 @@ h2, h1 {
     justify-content: center;
     padding: 0.5rem 1rem 1rem;
     letter-spacing: 3px;
-} */
+} */ 

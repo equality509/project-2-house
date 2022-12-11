@@ -8,17 +8,19 @@
     <%- include('../partials/head.ejs') %>
 </head>
 <body>
-    <h1>Edit House</h1>
+  <div class="img">
+    <h1 class="center" >Edit Mansion</h1>
     <a href="/house"><button>Back To Home</button></a>
 
-    <form action="/house" method="post">
+    <form action="/house/<%= house._id %>?_method=PUT" method="post">
         <fieldset>
-            <legend>Create a House</legend>
+            <legend>Edit A Mansion</legend>
           <label>
             NAME:<input
               type="text"
               name="name"
               placeholder="Enter Your Name"
+              value="<%=house.name%>"
             />
           </label>
           <label>
@@ -26,6 +28,7 @@
               type="text"
               name="city"
               placeholder="Enter City and State"
+              value="<%=house.city%>"
             />
           </label>
           <label>
@@ -33,20 +36,23 @@
               type="text"
               name="address"
               placeholder="Enter Street Address"
+              value="<%=house.address%>"
             />
           </label>
           <label>
           Bedrooms:<input
               type="text"
               name="bedrooms"
-              placeholder="Enter Number Of Bedrooms"
+              placeholder="Enter Bedrooms #"
+              value="<%=house.bedrooms%>"
             />
           </label>
           <label>
             Bathrooms:<input
               type="text"
               name="bathroom"
-              placeholder="Enter City and State"
+              placeholder="Enter Bathrooms #"
+              value="<%=house.bathrooms%>"
             />
           </label>
           <label>
@@ -54,11 +60,14 @@
               type="file"
               name="image"
               placeholder="Enter Your Name"
+              value="<%=house.image%>"
+
             />
           </label>     
         </fieldset>
                 
-        <input type="submit" value="Create New Fruit" />
-      </form>   
+        <input type="submit" value="Edit This Mansion" />
+      </form> 
+    </div>  
 </body>
 </html>

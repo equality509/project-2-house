@@ -11,14 +11,14 @@
 
 <div class="row">
     <% for (house of houses) { %>
-<div class="poke-container" id="poke-container">
-   <div class="pokemon">  
+<div class="e-container" id="e-container">
+   <div class="mon">  
        <div class="img-container">
      
         <img src="<%=house.image%>" alt="">
         </div>
         <div class="info">
-            <h2> House By : <a href="/house/<%= house._id%>"> <%=house.name%></a></h2>
+            <h2> House By : <a href="/house/<%= house._id%>"><%=house.name%></a></h2>
         
         </div>
     </div>
@@ -28,5 +28,6 @@
 </div>
 </div>
 
+<!-- <div class="par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ex obcaecati porro? Ea minus maiores optio, quae beatae repellat ullam labore modi libero aperiam ex quisquam provident. Doloremque, ab recusandae.</div> -->
 </body>
 </html>
