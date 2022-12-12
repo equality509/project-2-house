@@ -40,9 +40,9 @@ app.use(methodOverride("_method")) // override for put and delete requests from 
 
 
 //home page
-// app.get('/', (req, res) => {
-//     res.send('<h1>Server is Working</h1>')
-// })
+app.get('/', (req, res) => {
+    res.redirect('/house')
+})
 
 // seed route
 app.get('/house/seed', (req, res) => {
@@ -68,7 +68,7 @@ app.get('/house/seed', (req, res) => {
 
 
 //index page
-app.get('/', (req, res) => {
+app.get('/house', (req, res) => {
     House.find({})
     .then((houses) => {
         console.log(houses)
