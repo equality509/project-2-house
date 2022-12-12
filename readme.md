@@ -30,6 +30,13 @@ For my project 2 I chose to make a website for selling houses.  Im expecting to 
 
 ![text](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/Ce9cd9bcc2fa547909235be28c0f51f05/projects/MWZUPZIX4ob/pages/256782a338164010a28ab7b24888adba/image/256782a338164010a28ab7b24888adba.png?1670295088030)
 
+# Getting Started
+To get started I will first build out my Trello plan.  I wi,l then execut the steps one by one until the project is complete.  I will be sure to test and commit often in the process.
+
+
 ## Link To Project
 
 [My Project Live Page](https://house-qc25.onrender.com)
+
+## Next Steps
+My next steps are to eventually build out this into a full presentable project.  I will add Authentification, a nav bar and many morre items.

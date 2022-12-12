@@ -20,10 +20,10 @@ body {
     background-image: url('/images/Screenshot 2022-12-10 at 5.08.43 PM.png');
    background-repeat: no-repeat;
    height:40rem;
-   max-width: 250rem;
+   max-width: 100rem;
    background-position: center center;
    background-size:cover;
-   margin: 30 auto;
+   margin-top: 1rem;
    border-radius: 10px;
    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
    box-sizing: content-box;
@@ -120,7 +120,15 @@ form {
     display:flex;
     justify-content: center;
     text-shadow: 0 3px 15px rgba(100, 100, 100, 0.8);
-    color:rgb(239, 239, 253);
+    color:rgb(238, 238, 246);
+
+}
+
+.title1 {
+    display:flex;
+    justify-content: center;
+    text-shadow: 0 3px 15px rgba(100, 100, 100, 0.8);
+    color:rgb(44, 44, 49);
 
 }
 
@@ -153,16 +161,21 @@ form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    height:40rem;
-    max-width: 250rem;
+    height:10rem;
+    max-width: 82rem;
     background-position: center center;
     background-size:cover;
-    margin: 0 30px;
+    margin-top: 3rem;
     border-radius: 10px;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
     box-sizing: content-box;
     border: solid white;
     overflow:auto;
+    font-size: larger;
+}
+
+.dis {
+    display:inline-flex
 }
 
 /* .movie {
