@@ -39,4 +39,4 @@ To get started I will first build out my Trello plan.  I wi,l then execut the st
 [My Project Live Page](https://house-qc25.onrender.com)
 
 ## Next Steps
-My next steps are to eventually build out this into a full presentable project.  I will add Authentification, a nav bar and many morre items.
+My next steps are to eventually build out this into a full presentable project.  I will add Authentification, a nav bar and many morre items. As this will be something that I present to recruiters.
