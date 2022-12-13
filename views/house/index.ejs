@@ -8,7 +8,7 @@
     <div class="img">
     <h1 class="title">Mansions R Us</h1>
    
-<div class="title"><a href="/house/new"><button class="title1"> Post Your House</button></a></div>
+<div class="title"><a href="/house/new"><button class="title1"> Post Your Home</button></a></div>
 
 <div class="dis"></div>
 <div class="row">
@@ -16,8 +16,9 @@
 <div class="e-container" id="e-container">
    <div class="mon">  
        <div class="img-container">
-     
         <img src="<%=house.image%>" alt="">
+
+        <img src="/images/<%=house.image%>" alt="">
         </div>
         <div class="info">
             <h2> House By : <a href="/house/<%= house._id%>"><%=house.name%></a></h2>
