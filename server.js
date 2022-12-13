@@ -3,6 +3,8 @@ const express = require('express')
 const morgan = require('morgan')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
 
 const app = express()
 
@@ -69,30 +71,32 @@ app.get('/house/seed', (req, res) => {
 
 //index page
 app.get('/house', (req, res) => {
+    
     House.find({})
     .then((houses) => {
         console.log(houses)
         res.render('house/index.ejs', { houses});
+        
     });
 
-})
+}).post(upload.single('image'))
 //new route
 app.get('/house/new', (req, res) => {
     res.render('house/new.ejs')
-})
+}).post(upload.single('image'))
 //create route
 app.post('/house', (req, res) => {
     House.create(req.body,(err, houses) => {
         res.redirect('/house')
     })
-})
+}).post(upload.single('image'))
 
 //get edit page
 app.get('/house/:id/edit', (req, res) => {
     House.findById(req.params.id, (err, houses) => {
         res.render('house/edit.ejs', {house: houses})
     })
-})
+}).post(upload.single('image'))
 
 app.put('/house/:id', (req, res) => {
     House.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, house) => {
@@ -111,7 +115,7 @@ app.get('/house/:id',(req, res) => {
     .then((house) => {
         res.render('house/show.ejs', {house})
     })
-})
+}).post(upload.single('image'))
 
 app.delete('/house/:id', async (req, res) => {
 

@@ -161,7 +161,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    height:10rem;
+    max-height:100rem;
     max-width: 82rem;
     background-position: center center;
     background-size:cover;
